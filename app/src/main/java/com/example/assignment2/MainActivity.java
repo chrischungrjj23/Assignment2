@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startTimer() {
-        mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
+        mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1) {
             @Override
             public void onTick(long millisUntilFinished) {
                 mTimeLeftInMillis = millisUntilFinished;
