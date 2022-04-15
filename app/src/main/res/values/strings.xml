@@ -1,9 +1,14 @@
 <resources>
     <string name="app_name">Assignment2</string>
     <string name="T1">_DailyExpenses___________</string>
+    <string name="Line">_____________________________________________</string>
+    <string name="tv2">Total Expenses</string>
+    <string name="tv3">Record</string>
+    <string name="tv5">0.0</string>
+    <string name="tv6">|HKD|</string>
+
     <string name="btn1">Show</string>
     <string name="btn2">Add New</string>
-    <string name="tv2">State</string>
     <string name="tv4">Date</string>
     <string name="et1">Main Themes</string>
     <string name="et2">Remark</string>

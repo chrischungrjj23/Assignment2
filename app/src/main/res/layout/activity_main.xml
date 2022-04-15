@@ -17,7 +17,7 @@
         android:weightSum="5">
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/iv1"
             android:layout_width="50dp"
             android:layout_height="45dp"
             android:background="@color/material_dynamic_primary50"
@@ -28,11 +28,95 @@
             android:layout_width="match_parent"
             android:layout_height="45dp"
             android:background="@color/material_dynamic_primary50"
-            android:text="@string/T1"
-            android:textSize="34dp"
-            android:textColor="#000"
             android:gravity="center"
-            android:textStyle="bold"/>
+            android:text="@string/T1"
+            android:textColor="#000"
+            android:textSize="34dp"
+            android:textStyle="bold" />
+
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv2"
+        android:textSize="34dp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/L1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Line"
+        android:textSize="20sp"
+        android:textColor="#000" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/tv5"
+            android:textSize="34sp"
+            android:gravity="right"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/tv6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/tv6"
+            android:textSize="34sp"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#000"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/L3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Line"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tv3"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:textColor="#000"/>
+
+    <TextView
+        android:id="@+id/L2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Line"
+        android:textSize="20sp"
+        android:textColor="#000"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:visibility="gone"
+        />
 
 </LinearLayout>
