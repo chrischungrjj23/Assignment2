@@ -6,10 +6,10 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg2"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context="MainActivity">
 
 
-    <LinearLayout
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -18,8 +18,8 @@
 
         <ImageView
             android:id="@+id/iv1"
-            android:layout_width="50dp"
-            android:layout_height="45dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:background="@color/material_dynamic_primary50"
             app:srcCompat="@drawable/coin" />
 
@@ -34,7 +34,7 @@
             android:textSize="34dp"
             android:textStyle="bold" />
 
-    </LinearLayout>
+        </LinearLayout>
 
 
     <TextView
@@ -115,7 +115,8 @@
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:background="@android:color/transparent"
-            app:srcCompat="@android:drawable/ic_menu_add" />
+            app:srcCompat="@android:drawable/ic_menu_add"
+            tools:ignore="TouchTargetSizeCheck" />
     </LinearLayout>
 
     <TextView
