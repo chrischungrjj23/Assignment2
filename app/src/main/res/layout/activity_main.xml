@@ -36,15 +36,7 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/datePickerButton"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="JAN 01 2022"
-        android:textSize="30dp"
-        android:textColor="@color/black"
-        style="?android:spinnerStyle"
-        android:layout_gravity="center"/>
+
     <TextView
         android:id="@+id/tv2"
         android:layout_width="match_parent"

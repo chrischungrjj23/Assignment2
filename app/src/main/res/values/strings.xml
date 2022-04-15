@@ -4,12 +4,13 @@
     <string name="Line">_____________________________________________</string>
     <string name="tv2">Total Expenses</string>
     <string name="tv3">Record</string>
+    <string name="tv4">Please Pick a Day</string>
     <string name="tv5">0.0</string>
     <string name="tv6">|HKD|</string>
 
     <string name="btn1">Show</string>
     <string name="btn2">Add New</string>
-    <string name="tv4">Date</string>
+
     <string name="et1">Main Themes</string>
     <string name="et2">Remark</string>
     <string name="btn3">Check</string>
