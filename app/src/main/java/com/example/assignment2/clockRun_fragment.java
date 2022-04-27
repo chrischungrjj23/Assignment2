@@ -1,16 +1,15 @@
 package com.example.assignment2;
 
-import android.os.CountDownTimer;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity {
+public class clockRun_fragment {
+
     private static final long START_TIME_IN_MILLIS = 10000;
 
     private TextView mTextViewCountDown;
@@ -23,10 +22,11 @@ public class MainActivity extends AppCompatActivity {
 
     private long mTimeLeftInMillis = START_TIME_IN_MILLIS;
 
+    /*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.clock_Run);
 
         mTextViewCountDown = findViewById(R.id.text_view_countdown);
 
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         updateCountDownText();
-    }
+    }*/
 
     private void startTimer() {
         mCountDownTimer = new CountDownTimer(mTimeLeftInMillis, 1000) {
@@ -99,4 +99,3 @@ public class MainActivity extends AppCompatActivity {
         mTextViewCountDown.setText(timeLeftFormatted);
     }
 }
-
