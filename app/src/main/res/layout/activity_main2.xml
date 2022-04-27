@@ -26,7 +26,7 @@
         <Button
             android:id="@+id/datePickerButton"
             style="?android:spinnerStyle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="@string/DATE"
@@ -47,6 +47,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:textColor="@color/black"
             android:textSize="34sp" />
 
         <Button
@@ -57,21 +58,47 @@
             android:visibility="gone" />
 
         <Spinner
+            android:id="@+id/sp1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/sp1"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/et2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@color/design_default_color_on_primary"
+            android:ems="10"
+            android:hint="@string/hint2"
+            android:inputType="textPersonName"
+            android:textColorHint="#757575"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/et3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="@string/hint3"
+            android:background="@color/design_default_color_on_primary"
+            android:layout_marginBottom="10dp"
+            android:textColorHint="#757575"
             />
 
         <EditText
             android:id="@+id/et1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
+            android:background="@color/design_default_color_on_primary"
             android:ems="10"
+            android:gravity="left"
             android:hint="@string/hint1"
-            android:inputType="textPersonName"
+            android:inputType="text|textMultiLine|textCapSentences"
+            android:lines="2"
             android:minHeight="48dp"
-            android:textColorHint="@color/material_dynamic_neutral60" />
+            android:textColorHint="#757575" />
 
         <Button
             android:id="@+id/btn4"

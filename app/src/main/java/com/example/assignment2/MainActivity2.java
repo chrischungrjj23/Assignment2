@@ -8,7 +8,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -19,14 +23,14 @@ import android.widget.Toast;
 import java.security.Key;
 import java.util.Calendar;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private DatePickerDialog datePickerDialog;
     private Button dateButton,save,pick;
-    String date,dateDay,dateMonth;
-    TextView tvtest;
-    DatePicker datePicker;
-    Spinner sp1;
-    EditText detail;
+    private Spinner sp1;
+    private String date,dateDay,dateMonth;
+    private TextView tvtest;
+    private DatePicker datePicker;
+    private EditText detail,et2;
     SharedPreferences sharedpreferences;
     public static final String MYPreference = "MYPref";
     public static final String Name = "nameKey";
@@ -43,11 +47,24 @@ public class MainActivity2 extends AppCompatActivity {
         sp1 = findViewById(R.id.sp1);
         pick = findViewById(R.id.btn5);
         detail = findViewById(R.id.et1);
+        et2 = findViewById(R.id.et2);
         datePicker = findViewById(R.id.DatePicker);
         dateButton.setText(getTodaysDate());
         DatePicker picker = findViewById(R.id.DatePicker);
 
         sharedpreferences = getSharedPreferences(MYPreference,Context.MODE_PRIVATE);
+
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.Type, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        sp1.setAdapter(adapter);
+        sp1.setOnItemSelectedListener(this);
+
+        ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this,R.array.Type, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
+        sp1.setAdapter(adapter);
+        sp1.setOnItemSelectedListener(this);
+
 
         save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,6 +74,7 @@ public class MainActivity2 extends AppCompatActivity {
                 }else {
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
+                    Toast.makeText(getApplicationContext(), "Saved",Toast.LENGTH_SHORT).show();
 
                 }
             }
@@ -78,8 +96,9 @@ public class MainActivity2 extends AppCompatActivity {
             public void onClick(View view) {
                 datePicker.setVisibility(View.GONE);
                 pick.setVisibility(View.GONE);
+                sp1.setVisibility(View.VISIBLE);
                 tvtest.setText("Selected Day: " + date);
-
+                Toast.makeText(getApplicationContext(),date + "Selected",Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -180,4 +199,21 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        String choice = adapterView.getItemAtPosition(i).toString();
+        Toast.makeText(getApplicationContext(),choice,Toast.LENGTH_SHORT).show();
+
+        if(choice == "Custom"){
+            et2.setVisibility(View.VISIBLE);
+
+        }
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
+
 }
+

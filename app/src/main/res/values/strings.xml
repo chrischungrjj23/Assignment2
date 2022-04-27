@@ -8,6 +8,9 @@
     <string name="tv5">0.0</string>
     <string name="tv6">HKD</string>
     <string name="hint1">You may input some detail here...</string>
+    <string name="hint2">Input your type</string>
+    <string name="hint3">Input Price</string>
+
     <string name="DATE">JAN 01 2022</string>
 
     <string name="btn1">Show</string>
@@ -18,4 +21,15 @@
     <string name="btn3">Check</string>
     <string name="btn4">Save</string>
     <string name="btn5">select</string>
+
+    <string-array name="Type">
+        <item>Food</item>
+        <item>Travel</item>
+        <item>Medical</item>
+        <item>Consumption</item>
+        <item>Rent</item>
+        <item>Custom</item>
+    </string-array>
+
+
 </resources>
