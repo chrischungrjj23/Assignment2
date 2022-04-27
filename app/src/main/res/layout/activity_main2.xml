@@ -32,11 +32,46 @@
             android:textColor="@color/black"
             style="?android:spinnerStyle"
             android:layout_gravity="center"/>
+
+        <DatePicker
+            android:id="@+id/DatePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="#FFFFFF"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tvtest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="34sp" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn5"
+            android:visibility="gone" />
+
         <Spinner
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/sp1"
             />
+
+        <EditText
+            android:id="@+id/et1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:background="@color/white"
+            android:ems="10"
+            android:hint="@string/hint1"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/material_dynamic_neutral60" />
 
         <Button
             android:id="@+id/btn4"

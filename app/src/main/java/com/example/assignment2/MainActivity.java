@@ -28,16 +28,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       // iv2 = findViewById(R.id.iv2);
+        iv2 = findViewById(R.id.iv2);
 
-        /**iv2.setOnClickListener(new View.OnClickListener() {
+        iv2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
                 startActivity(intent);
 
+
+
             }
-        });*/
+        });
 
     }
 }

@@ -5,19 +5,28 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.security.Key;
 import java.util.Calendar;
 
 public class MainActivity2 extends AppCompatActivity {
-
     private DatePickerDialog datePickerDialog;
-    private Button dateButton;
+    private Button dateButton,save,pick;
+    String date,dateDay,dateMonth;
+    TextView tvtest;
+    DatePicker datePicker;
+    Spinner sp1;
+    EditText detail;
+    SharedPreferences sharedpreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,11 +34,67 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         initDatePicker();
         dateButton = findViewById(R.id.datePickerButton);
+        tvtest = findViewById(R.id.tvtest);
+        save = findViewById(R.id.btn4);
+        sp1 = findViewById(R.id.sp1);
+        pick = findViewById(R.id.btn5);
+        detail = findViewById(R.id.et1);
+        datePicker = findViewById(R.id.DatePicker);
         dateButton.setText(getTodaysDate());
+        DatePicker picker = findViewById(R.id.DatePicker);
+
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(tvtest == null && sp1== null){
+                    Toast.makeText(getApplicationContext(),"Please fill in the Date and Theme.",Toast.LENGTH_SHORT).show();
+                }else {
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
+
+        dateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               datePicker.setVisibility(View.VISIBLE);
+                pick.setVisibility(View.VISIBLE);
 
 
 
+            }
+        });
+
+        pick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                datePicker.setVisibility(View.GONE);
+                pick.setVisibility(View.GONE);
+                tvtest.setText("Selected Day: " + date);
+
+            }
+        });
+
+        int Year = picker.getYear();
+        int Month =picker.getMonth()+1;
+        int Day = picker.getDayOfMonth();
+        picker.init(Year,Month,Day, new DatePicker.OnDateChangedListener() {
+            @Override
+            public void onDateChanged(DatePicker datePicker, int year, int month, int day) {
+                StringBuilder builder = new StringBuilder();
+                builder.append(day+"/");
+                builder.append(month+1+"/");
+                builder.append(year);
+                date=builder.toString();
+                dateDay=String.valueOf(picker.getMonth()+1);
+                dateMonth=String.valueOf(picker.getDayOfMonth());
+            }
+        });
+        tvtest.setText(date);
     }
+
+
 
     private String getTodaysDate()
     {
