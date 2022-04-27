@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -27,6 +28,9 @@ public class MainActivity2 extends AppCompatActivity {
     Spinner sp1;
     EditText detail;
     SharedPreferences sharedpreferences;
+    public static final String MYPreference = "MYPref";
+    public static final String Name = "nameKey";
+    public static final String Email = "emailKey";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +47,8 @@ public class MainActivity2 extends AppCompatActivity {
         dateButton.setText(getTodaysDate());
         DatePicker picker = findViewById(R.id.DatePicker);
 
+        sharedpreferences = getSharedPreferences(MYPreference,Context.MODE_PRIVATE);
+
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,6 +57,7 @@ public class MainActivity2 extends AppCompatActivity {
                 }else {
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
+
                 }
             }
         });
@@ -171,4 +178,6 @@ public class MainActivity2 extends AppCompatActivity {
     {
         datePickerDialog.show();
     }
+
+
 }

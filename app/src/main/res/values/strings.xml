@@ -8,6 +8,7 @@
     <string name="tv5">0.0</string>
     <string name="tv6">HKD</string>
     <string name="hint1">You may input some detail here...</string>
+    <string name="DATE">JAN 01 2022</string>
 
     <string name="btn1">Show</string>
     <string name="btn2">Add New</string>

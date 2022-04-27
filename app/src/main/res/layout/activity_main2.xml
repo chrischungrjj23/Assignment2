@@ -25,13 +25,13 @@
 
         <Button
             android:id="@+id/datePickerButton"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:text="JAN 01 2022"
-            android:textSize="30dp"
-            android:textColor="@color/black"
             style="?android:spinnerStyle"
-            android:layout_gravity="center"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/DATE"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
 
         <DatePicker
             android:id="@+id/DatePicker"
@@ -66,11 +66,11 @@
             android:id="@+id/et1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="25"
             android:background="@color/white"
             android:ems="10"
             android:hint="@string/hint1"
             android:inputType="textPersonName"
+            android:minHeight="48dp"
             android:textColorHint="@color/material_dynamic_neutral60" />
 
         <Button
